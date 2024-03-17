@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+<style>
+body{
+  height: 100vh;
+}
+
+    .container{
+      display: grid;
+      width: 330px;
+      height: 450px;
+      grid-template-columns:60px 60px 60px 60px;
+      grid-template-rows:40px 40px 40px 40px 40px 40px 40px ;
+      margin: 100px;
+      margin-left: 520px;
+      grid-gap:25px;
+      background-color:brown;
+    
+      align-items: center;
+      border-radius: 24px;
+box-shadow: 4px 3px 4px 3px ;
+border:3px solid rgb(29, 24, 24);
+margin-bottom: 20px;
+
+  }
+  .cal-inp{
+      grid-column: 1/5;
+      grid-row:1/3;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 80px;
+      margin-left: 15px;
+      border-radius: 20px;
+      align-items: center;
+      margin-top: 10px;
+  }
+  .btnAC{
+      grid-column: 1/2;
+      grid-row:3/4;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left: 12px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+    
+  }
+
+  .btnAC input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btnDE{
+      grid-column: 2/3;
+      grid-row:3/4;
+      text-align: center;
+      background-color: black;
+      color: white;
+       height: 30px;
+      margin-left:7px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  .btnDE input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .btnPoint{
+      grid-column: 3/4;
+      grid-row:3/4;
+      text-align: center;
+      background-color: black;
+      color: white;
+       height: 30px;
+      margin-left: 2px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btnPoint input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .btndivide{
+      grid-column: 4/5;
+      grid-row:3/4;
+      text-align: center;
+      background-color: black;
+      color: white;
+       height: 30px;
+      margin-left:-3px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btndivide input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btn7{
+      grid-column: 1/2;
+      grid-row:4/5;
+      text-align: center;
+      background-color: black;
+      color: white;
+           height: 30px;
+      margin-left: 12px;
+      border-radius: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn7 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btn8{
+      grid-column: 2/3;
+      grid-row:4/5;
+      text-align: center;
+      background-color: black;
+      color: white;
+       height: 30px;
+      margin-left:7px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn8 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+    
+  }
+  .btn9{
+      grid-column: 3/4;
+      grid-row:4/5;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left: 2px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn9 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+
+
+  }
+  .btnmul{
+      grid-column: 4/5;
+      grid-row:4/5;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left:-3px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btnmul input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btn4{
+      grid-column: 1/2;
+      grid-row:5/6;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left: 12px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn4 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btn5{
+      grid-column: 2/3;
+      grid-row:5/6;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left:7px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn5 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btn6{
+      grid-column: 3/4;
+      grid-row:5/6;
+      text-align: center;
+      background-color: black;
+      color: white;
+         height: 30px;
+      margin-left: 2px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn6 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btnsub{
+      grid-column: 4/5;
+      grid-row:5/6;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left:-3px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+
+  .btnsub input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+    font-size: 18px;
+
+
+  }
+  .btn1{
+      grid-column: 1/2;
+      grid-row:6/7;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left: 12px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn1 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btn2{
+      grid-column: 2/3;
+      grid-row:6/7;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left:7px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn2 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btn3{
+      grid-column: 3/4;
+      grid-row:6/7;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left: 2px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn3 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btnadd{
+      grid-column: 4/5;
+      grid-row:6/7;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left:-3px;
+      border-radius: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btnadd input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+    
+  }
+  .btn00{
+      grid-column: 1/2;
+      grid-row:7/8;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left: 12px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btn00 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btn0{
+      grid-column: 2/3;
+      grid-row:7/8;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left:7px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 60px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+
+  }
+  
+  .btn0 input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .btnequal{
+      grid-column: 3/5;
+      grid-row:7/8;
+      text-align: center;
+      background-color: black;
+      color: white;
+      height: 30px;
+      margin-left: 2px;
+      border-radius: 10px;
+      padding-top: 6px;
+    padding-bottom: 6px;
+    width: 140px;
+    box-shadow: 2px 1px rgb(58, 55, 55);
+    border:2px solid rgb(29, 24, 24);
+  }
+  
+  .btnequal input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 18px;
+
+  }
+  .cal1{
+      margin-top:2px ;
+      height:  70px;
+     width: 285px;
+     border-radius:18px;
+     background-color: black;
+     color: white;
+     border-color: black;
+     font-size:40px;
+     /* border: 0; */
+     outline: 0;
+     cursor: pointer;
+     text-align: right;
+  }
+  .bgimg{
+background-image: url(img/pic.jpg);
+height: 100vh;
+width: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+  }
+</style>
+<body>
+
+ <div class="bgimg">
+      <div class="media container">
+        
+        <div class="cal-inp"><input type="text" class="cal1" id="show"></div>
+        <div class="btnAC" onclick="btnclear()" ><input type="button" value="AC"></div>
+        <div class="btnDE" onclick="btndelete()"><input type="button" value="DE"></div>
+        <div class="btnPoint" onclick="btnpoint('.')"><input type="button" value="."></div>
+        <div class="btndivide" onclick="btndiv('/')"><input type="button" value="÷" ></div>
+        <div class="btn7" onclick="btn7('7')"><input type="button" value="7"></div>
+        <div class="btn8" onclick="btn8('8')"><input type="button" value="8"></div>
+        <div class="btn9" onclick="btn9('9')"><input type="button" value="9"></div>
+        <div class="btnmul" onclick="btnmul('*')"><input type="button" value="×"></div>
+        <div class="btn4" onclick="btn4('4')"><input type="button" value="4"></div>
+        <div class="btn5" onclick="btn5('5')"><input type="button" value="5"></div>
+        <div class="btn6" onclick="btn6('6')"><input type="button" value="6"></div>
+        <div class="btnsub" onclick="btnsub('-')"><input type="button" value="-"></div>
+        <div class="btn1" onclick="btn1('1')"><input type="button" value="1"></div>
+        <div class="btn2" onclick="btn2('2')"><input type="button" value="2"></div>
+        <div class="btn3" onclick="btn3('3')"><input type="button" value="3"></div>
+        <div class="btnadd" onclick="btnplus('+')"><input type="button" value="+"></div>
+        <div class="btn00" onclick="btn00('00')"><input type="button" value="00"></div>
+        <div class="btn0" onclick="btn0('0')"><input type="button" value="0"></div> 
+        <div class="btnequal" onclick="calculate()"><input type="button" value="="></div>
+      </div>
+    </div>
+      <script src="calculator.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&family=Stylish&display=swap");
+    
+
+
+    body{
+        background-color: white;
+        box-sizing: border-box;
+
+    }
+   
+</style>
+<body>
+
+    <!-- navbar start -->
+
+
+    <style>
+      .navbar-brand{
+      font-family: Poppins;
+
+      }
+      .navicon{
+        color:rgb(217, 132, 101);
+        margin: 5px;
+        font-size: 25px;
+
+      }
+      
+      .icons{
+        font-size: 25px;
+        color: rgb(217, 132, 101);
+        
+      }
+
+
+      .nav-link {
+      font-size: 15px;
+      font-family: Poppins;
+
+      
+
+      
+    }
+    .nav-item:hover {
+      border-bottom: 1px solid rgb(217, 132, 101);
+      font-size: 700px;
+      transition: 0.3s ease-in-out;
+      font-family: Poppins;
+
+    }
+
+
+    .nav-item a:hover {
+      transition: 0.3s ease-in-out;
+      color: rgb(217, 132, 101) !important;
+    }
+
+
+    
+    </style>
+
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+            <a class=" navbar-brand" href="#"><img src="" alt="" srcset=""><i class="navicon fa fa-shopping-basket" aria-hidden="true"></i>Groco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class=" nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shop">Shop </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#review">Review</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+
+             <div class="icons">
+              <i class="fa fa-search" data-bs-target="#searchModal" data-bs-toggle="modal"></i>
+              <i class="fa fa-shopping-cart" data-bs-target="#shopping-cartModal" data-bs-toggle="modal" aria-hidden="true"></i>
+              <i class="fa fa-user "data-bs-target="#userModal" data-bs-toggle="modal"></i>
+            </div>
+            
+            </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+<!--search Modal start -->
+<style>
+  .search  input{
+    width: 400px;
+    height: 40px;
+    padding:20px;
+    border: none;
+    font-family: poppins;
+    font-size: 16px;
+
+  }
+
+  .searchmodalicon {
+    padding-left: 35px;
+    font-size:25px ;
+    color: rgb(217, 132, 101);
+
+  }
+</style>
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="search modal-body">
+        <input placeholder="Search here..."><i class="searchmodalicon fa fa-search"></i>
+      </div>
+    
+    </div>
+  </div>
+</div>
+<!-- search modal end -->
+
+<!-- shopping cart modal start -->
+
+<style>
+
+.cart{
+  padding-top: 20px;
+  
+}
+
+.cart-butt{
+  background-color: rgb(217, 132, 101);
+  font-family: poppins;
+  color:white;
+}
+
+</style>
+
+
+<div class="modal fade" id="shopping-cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+
+
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-4">
+              <img src="image/cart-1.jpg" alt="" height="100px" width = "100px">
+            </div>
+
+            <div class="cart col-md-8">
+              <h4>Organic food</h4>
+              <p>1 * $18.99</p>
+            </div>
+
+          </div>
+        </div>
+
+<br>
+
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-4">
+              <img src="image/cart-2.jpg" alt="" height="100px" width = "100px">
+            </div>
+
+            <div class="cart col-md-8">
+              <h4>Organic food</h4>
+              <p>1 * $18.99</p>
+            </div>
+
+          </div>
+        </div>
+
+<br>
+
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-4">
+              <img src="image/cart-3.jpg" alt="" height="100px" width = "100px">
+            </div>
+
+            <div class="cart col-md-8">
+              <h4>Organic food</h4>
+              <p>1 * $18.99</p>
+            </div>
+
+          </div>
+        </div>
+
+<br>
+<div class="modal-footer">
+</div>
+        <center><h5>Total : $56.78</h5></center>
+        
+        <button type="button" class="cart-butt form-control">Check out cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- shopping cart modal end -->
+
+<!-- user modal start -->
+<style>
+  .login-butt{
+    height:40px ;
+    width: 120px;
+    background-color:rgb(217, 132, 101);
+    color :white;
+    border: none;
+    font-family: sans-serif;
+    margin-left: 160px; 
+   
+
+  }
+
+  
+ 
+
+</style>
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+      <center><h2><b>LOGIN NOW</b></h></center>
+        <br>
+        <input type="text" class="login-input text-center form-control" placeholder="Enter your email">
+        <br>
+       <input type="text" class="login-input text-center form-control" placeholder="Enter your password">
+       <br>
+        
+       <button class="login-butt">Login</button>
+
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<!-- user modal end -->
+
+
+
+
+<!-- navbar end -->
+
+
+
+<!-- home start -->
+
+
+<style>
+  .home{
+    background-image:url(image/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    
+  }
+
+
+  .hom1{
+    padding-top: 200px;
+    padding-left: 40px;
+    font-family: Poppins;
+    font-weight: 400px;
+
+  }
+
+  .hom2{
+    padding-top: 50px;
+  }
+
+  .hombutt{
+    height:40px ;
+    width: 150px;
+    background-color:rgb(217, 132, 101);
+    color :white;
+    border: none;
+    font-family: sans-serif;
+
+
+  }
+
+  .hombutt:hover{
+    height:40px ;
+    width: 150px;
+    background-color:#222;
+    color :white;
+    border: none;
+    font-family: sans-serif;
+
+  }
+</style>
+
+<div class="home container-fluid" id="home">
+
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+      
+        <div class="container">
+          <div class="row">
+
+            <div class="hom1 child animate__animated animate__fadeInLeft animate__delay-0.9  col-md-6">
+              <h4>Fresh And Organic</h4>
+              <strong><h1>Upto 50% Off</h1></strong>
+              
+              <button class="hombutt">shop Now</button>
+            </div>
+
+            <div class="hom2 animate__animated animate__fadeInDown animate__delay-0.1 col-md-6">
+                <img src="image/home-img-1.png" class="d-block w-100" alt="...">
+             </div>
+
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="carousel-item">
+
+        <div class="container">
+          <div class="row">
+
+            <div class="hom1 child animate__animated animate__fadeInLeft animate__delay-0.9 col-md-6">
+              <h4>Fresh And Organic</h4>
+            <strong><h1>Upto 50% Off</h1></strong>
+            
+              <button class="hombutt">shop Now</button>
+            </div>
+
+            <div class="hom2 animate__animated animate__fadeInDown animate__delay-0.1 col-md-6">
+                <img src="image/home-img-2.png" class="d-block w-100" alt="...">
+             </div>
+
+
+          </div>
+        </div>
+       
+      </div>
+
+
+      <div class="carousel-item">
+
+        <div class="container">
+          <div class="row">
+
+            <div class="hom1 child animate__animated animate__fadeInLeft animate__delay-0.9 col-md-6">
+              <h4>Fresh And Organic</h4>
+              <strong><h1>Upto 50% Off</h1></strong>
+              
+              <button class="hombutt">shop Now</button>
+            </div>
+
+            <div class="hom2 animate__animated animate__fadeInDown animate__delay-0.1 col-md-6">
+                <img src="image/home-img-3.png" class="d-block w-100" alt="...">
+             </div>
+
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+ 
+
+
+</div>
+
+<!-- home end -->
+
+<br><br>
+
+<!-- banner start -->
+
+
+<style>
+
+  .ban1{
+    background-image: url(image/banner-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 360px;
+    padding-left: 20px;
+    padding-top: 70px;
+    margin:10px;
+    transition: transform .2s; 
+    font-family: Poppins;
+
+  
+  }
+
+  .ban1:hover{
+    
+    transform: scale(1.1); 
+}
+
+
+  .ban2{
+    background-image: url(image/banner-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 360px;
+    padding-left: 20px;
+    padding-top: 70px;
+    margin:10px;
+    transition: transform .2s;
+    font-family: Poppins;
+
+
+  
+  }
+
+  .ban2:hover{
+    
+    transform: scale(1.1); 
+}
+
+
+  .ban3{
+    background-image: url(image/banner-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 360px;
+    padding-left: 20px;
+    padding-top: 70px;
+    margin:10px;
+    transition: transform .2s; 
+    font-family: Poppins;
+
+  
+  }
+
+.ban3:hover{
+    
+    transform: scale(1.1); 
+}
+  
+.banbutt{
+    height:40px ;
+    width: 140px;
+    background-color:rgb(217, 132, 101);
+    color :white;
+    border: none;
+    font-family: sans-serif;
+
+
+  }
+
+  .banbutt:hover{
+    height:40px ;
+    width: 140px;
+    background-color:#222;
+    color :white;
+    border: none;
+    font-family: sans-serif;
+
+
+  }
+
+</style>
+
+
+
+<div class="container">
+  <div class="row">
+
+
+
+    <div class="ban1 col-md-4">
+
+      <p>Limited Sales</p>
+      <h5>Upto 75% Off</h5>
+      
+      <button class="banbutt">shop Now</button>
+
+    </div>
+
+   
+    <div class="ban2 col-md-4">
+      <p>Limited Sales</p>
+      <h5>Upto 75% Off</h5>
+      
+      <button class="banbutt">shop Now</button>
+
+    </div>
+   
+
+    
+    <div class="ban3 col-md-4">
+      <p>Limited Sales</p>
+      <h5>Upto 75% Off</h5>
+      
+      <button class="banbutt">shop Now</button>
+
+    </div>
+    
+
+
+
+
+  </div>
+</div>
+
+
+<!-- banner end -->
+<br><br><br>
+<!-- category start -->
+
+<style>
+.heading{
+  font-family: poppins;
+  font-size: larger;
+
+}
+
+.heading span{
+  font-family: poppins;
+  color: rgb(217, 132, 101) ;
+
+}
+
+.category{
+  text-align: center;
+
+}
+
+
+</style>
+
+<div class="heading container" id="shop">
+  <h3>Our <span>Categories</span></h3>
+  <hr>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="category col-md-2">
+      <br>
+      <img src="image/cat-1.png" alt="" srcset="" height="150px">
+      <br><br>
+      <p><b>Fresh Fruit</b></p>
+    </div>
+    <div class="category col-md-2">
+      <br>
+      <img src="image/cat-2.png" alt="" srcset="" height="150px">
+      <br><br>
+      <p><b>Vegetables</b></p>
+    </div>
+    <div class="category col-md-2">
+      <br>
+      <img src="image/cat-3.png" alt="" srcset="" height="150px">
+      <br><br>
+      <p><b>Organic Spicies</b></p>
+    </div>
+    <div class="category col-md-2">
+      <br>
+      <img src="image/cat-4.png" alt="" srcset="" height="150px">
+      <br><br>
+      <p><b>Fresh Meat</b></p>
+    </div>
+    <div class="category col-md-2">
+      <br>
+      <img src="image/cat-5.png" alt="" srcset="" height="150px">
+      <br><br>
+      <p><b>Orgaic Wheat</b></p>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+
+
+<!-- category end -->
+<br><br><br>
+
+<!-- shop start -->
+<style>
+ .card{
+  background-color: rgb(223, 222, 222);
+ }
+
+ .card:hover{
+  transform: scale(1.1);
+ }
+ 
+</style>
+<div class="heading container" >
+  <h3>Our <span>Products</span></h3>
+  <hr>
+</div>
+
+<div class="container">
+  <div class="row">
+
+
+      <div class="col-md-3 mt-5 text-center">
+        <div class="card">
+          <img src="image/product-1.jpg" class="card-img-top" alt="" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Organic Food</h5>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p class="card-text">$100</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-5 text-center">
+        <div class="card">
+          <img src="image/product-2.jpg" class="card-img-top" alt="" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Organic Food</h5>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p class="card-text">$200</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3 mt-5 text-center">
+        <div class="card">
+          <img src="image/product-3.jpg" class="card-img-top" alt="" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Organic Food</h5>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p class="card-text">$150</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3 mt-5 text-center">
+        <div class="card">
+          <img src="image/product-4.jpg" class="card-img-top" alt="" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Organic Food</h5>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p class="card-text">$1000</p>
+          </div>
+        </div>
+      </div>
+
+
+
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+
+
+      <div class="col-md-3 mt-5 text-center">
+        <div class="card">
+          <img src="image/product-5.jpg" class="card-img-top" alt="" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Organic Food</h5>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p class="card-text">$500</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-5 text-center">
+        <div class="card">
+          <img src="image/product-6.jpg" class="card-img-top" alt="" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Organic Food</h5>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p class="card-text">$300</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3 mt-5 text-center">
+        <div class="card">
+          <img src="image/product-7.jpg" class="card-img-top" alt="" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Organic Food</h5>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p class="card-text">$800</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3 mt-5 text-center">
+        <div class="card">
+          <img src="image/product-8.jpg" class="card-img-top" alt="" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Organic Food</h5>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p class="card-text">$900</p>
+          </div>
+        </div>
+      </div>
+
+
+
+  </div>
+</div>
+
+
+
+
+<!-- shop end -->
+
+<br><br><br>
+
+<!-- about start -->
+<div class="heading container" id="about">
+  <h3><span>About</span> Us</h3>
+  <hr>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4 text-center">
+      <img src="image/about-img.jpg" alt="" srcset="" height="300px" width="340px">
+    </div>
+    <div class="col-md-6">
+      <br><br>
+      <h2><b>Fresh And Organic Grocery</b></h2>
+      <br>
+      <p>Choosing fresh and organic groceries promotes health and nutrition while minimizing exposure to harmful chemicals.</p>
+      <p>These foods support local farmers and contribute to environmental sustainability. By prioritizing fresh and organic options, we can keep ourselves and our planet healthy.</p>
+      </div>
+
+  </div>
+</div>
+
+
+<!-- about end -->
+
+<br><br><br>
+
+<!-- gallery start -->
+
+<style>
+  .gallery img:hover{
+transform: scale(1.1);
+  }
+</style>
+
+<div class="heading container">
+  <h3>Our <span>Gallery</span> </h3>
+  <hr>
+</div>
+
+<div class="container">
+  <div class="row">
+
+<div class="gallery col-md-4 mt-5 text-center">
+  <img src="image/gallery-img-1.jpg" alt="" srcset="" height="230px">
+</div>
+
+<div class="gallery col-md-4 mt-5 text-center">
+  <img src="image/gallery-img-2.jpg" alt="" srcset="" height="230px">
+</div>
+
+<div class="gallery col-md-4 mt-5 text-center">
+  <img src="image/gallery-img-3.jpg" alt="" srcset="" height="230px">
+</div>
+
+
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+
+<div class="gallery col-md-4 mt-5 text-center">
+  <img src="image/gallery-img-4.jpg" alt="" srcset="" height="230px">
+</div>
+
+<div class="gallery col-md-4 mt-5 text-center">
+  <img src="image/gallery-img-5.jpg" alt="" srcset="" height="230px">
+</div>
+
+<div class="gallery col-md-4 mt-5 text-center">
+  <img src="image/gallery-img-6.jpg" alt="" srcset="" height="230px">
+</div>
+
+
+  </div>
+</div>
+
+
+<!-- gallery start -->
+
+<br><br><br>
+
+<!-- rev start -->
+
+<style>
+  .rev{
+    display: flex;
+    padding-left: 70px;
+    padding-right: 50px;
+  
+  }
+
+  .txt{
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+
+  
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="rev col-md-4 mt-5 ">
+      <div class="pic">
+        <img src="image/icon-1.png" alt="" srcset="">
+      </div>
+      <div class="txt">
+        <h4><b>Fast Delivery</b></h4>
+        <p>Within 30 minutes</p>
+      </div>
+    </div>
+    
+
+    <div class="rev col-md-4 mt-5 ">
+      <div class="pic">
+        <img src="image/icon-2.png" alt="" srcset="">
+      </div>
+      <div class="txt">
+        <h4><b>24/7 Service</b></h4>
+        <p>Call us any time</p>
+      </div>
+    </div>
+
+
+    <div class="rev col-md-4 mt-5 ">
+      <div class="pic">
+        <img src="image/icon-3.png" alt="" srcset="">
+      </div>
+      <div class="txt">
+        <h4><b>Easy Payments</b></h4>
+        <p>Cash or card any</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- rev end -->
+
+<br><br><br>
+
+
+<!-- Review start -->
+
+<style>
+
+  .Review .Review-slider  .box img{
+width: 100%;
+opacity: .5;
+transform: scale(.8);
+
+    }
+    .Review .Review-slider .box .content{
+        padding-top: 1rem;
+        transform: scale(0);
+
+
+    }
+  .Review .Review-slider .swiper-slide-active img{
+        opacity: 1;
+transform: scale(1);
+
+    }
+    .Review .Review-slider .swiper-slide-active .content{
+        
+        transform: scale(1);
+
+    }
+</style>
+
+<div class="heading container" id="review">
+  <h3>Our <span>Reviews</span> </h3>
+  <hr>
+</div>
+<br><br>
+<div class="Review container">
+  <div class="swiper Review-slider">
+      <div class="swiper-wrapper">
+
+
+          <div class="swiper-slide box text-center">
+              <img src="image/pic-1.png"  alt=""style="border-radius:50% ;height: 200px;width: 200px;">
+              <h4><b>Deo john</b></h4>
+        <br>
+        <p class="ptext pb-4" >
+            By lehading and supporting critical conservation projects in the field, encouraging and leveraging the power of thousands of visitors, and serving as ......
+          </p>
+          <p>⭐⭐⭐⭐⭐</p>
+          </div>
+
+
+          <div class="swiper-slide box text-center">
+            <img src="image/pic-2.png"  alt=""style="border-radius:50% ;height: 200px;width: 200px;">
+            <h4><b>Carter</b></h4>
+      <br>
+      <p class="ptext pb-4" >
+          By lehading and supporting critical conservation projects in the field, encouraging and leveraging the power of thousands of visitors, and serving as ......
+        </p>
+        <p>⭐⭐⭐⭐⭐</p>
+        </div>
+
+
+        <div class="swiper-slide box text-center">
+          <img src="image/pic-3.png"  alt=""style="border-radius:50% ;height: 200px;width: 200px;">
+          <h4><b>Grayson</b></h4>
+    <br>
+    <p class="ptext pb-4" >
+        By lehading and supporting critical conservation projects in the field, encouraging and leveraging the power of thousands of visitors, and serving as ......
+      </p>
+      <p>⭐⭐⭐⭐⭐</p>
+      </div>
+
+
+      <div class="swiper-slide box text-center">
+        <img src="image/pic-4.png"  alt=""style="border-radius:50% ;height: 200px;width: 200px;">
+        <h4><b> Avery</b></h4>
+  <br>
+  <p class="ptext pb-4" >
+      By lehading and supporting critical conservation projects in the field, encouraging and leveraging the power of thousands of visitors, and serving as ......
+    </p>
+    <p>⭐⭐⭐⭐⭐</p>
+    </div>
+
+
+     <div class="swiper-slide box text-center">
+        <img src="image/pic-5.png"  alt=""style="border-radius:50% ;height: 200px;width: 200px;">
+        <h4><b>Jackson</b></h4>
+  <br>
+  <p class="ptext pb-4" >
+      By lehading and supporting critical conservation projects in the field, encouraging and leveraging the power of thousands of visitors, and serving as ......
+    </p>
+    <p>⭐⭐⭐⭐⭐</p>
+    </div>
+
+          
+            
+      </div>
+      <br><br>
+      <div class="swiper-pagination"></div>
+  </div>
+          </div>
+
+<!-- Review end -->
+
+<br><br><br>
+
+
+<!-- contact start -->
+<style>
+  
+  
+.con1{
+  border:2px dotted black;
+}
+
+.con1 .inp{
+  border:2px solid #7c7b7b;
+  border-radius: 5px;
+}
+
+
+
+</style>
+<div class="heading container" id="contact">
+  <h3><span>Contact</span> Us</h3>
+  <hr>
+</div>
+
+<div class="contact container">
+  <div class="row">
+    <div class="con1 col-md-6 text-center">
+     
+<form class="text-center p-5" >
+
+<h3 class="mb-5"><b>Get In Touch</b></h3>
+
+
+<input class="inp text-center" type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder=" your name">
+<br><br>
+
+<input class="inp text-center " type="email" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="your email">
+<br><br>
+
+<input class="inp text-center" type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="subject">
+
+<br><br><br>
+<button class="fotbutt">Send</button>
+
+</form>
+    </div>
+
+
+    <div class="col-md-6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115774.96550039669!2d67.0892032!3d24.933171199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f8014fe5943%3A0x11df7a65effb1ef6!2sNorth%20Nazimabad%20Town%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1679335063748!5m2!1sen!2s" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- contact end -->
+
+<br><br><br>
+
+<!-- footer start -->
+
+
+
+<style>
+
+  .footer{
+    color: black !important;
+    font-family: poppins !important;
+    font-size: 19px;
+  }
+
+  .pa{
+    color: grey;
+    font-family: poppins !important;
+    font-size: 14px;
+
+  }
+
+
+  .pa:hover{
+    color: rgb(217, 132, 101);
+    font-family: poppins !important;
+    font-size: 14px;
+
+  }
+
+  .par{
+    color: grey;
+    font-family: poppins !important;
+    font-size: 14px;
+
+  }
+
+  .container input {
+    height: 45px;
+    width:250px ;
+    border: none;
+    padding: 20px;
+
+    
+  }
+
+
+  .fotbutt{
+    height:40px ;
+    width: 120px;
+    background-color:rgb(217, 132, 101);
+    color :white;
+    border: none;
+    font-family: sans-serif;
+
+
+  }
+
+  .fotbutt:hover{
+    height:40px ;
+    width: 120px;
+    background-color:#222;
+    color :white;
+    border: none;
+    font-family: sans-serif;
+
+
+  }
+
+  .foticon{
+        color:rgb(217, 132, 101);
+        margin: 5px;
+        font-size: 14px;
+
+      }
+  
+</style>
+
+
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class=" container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-light " id="liiiiii">
+          <!-- Content -->
+          <h6 class="footer  text-uppercase fw-bold mb-4 mt-5 ">Quick Links
+          </h6>
+         
+
+          <p class="pa">
+            <a href="#home" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>Home</a>
+          </p>
+    
+          <p  class="pa">
+            <a href="#shop" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>Shop</a>
+          </p>
+  
+          <p  class="pa">
+            <a href="#about" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>About</a>
+          </p>
+  
+          <p  class="pa">
+            <a href="#review" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>Review</a>
+          </p>
+
+          <p  class="pa">
+            <a href="#contact" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>Contact</a>
+          </p>
+          
+    </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-light mt-5">
+          <!-- Links -->
+          <h6 class="footer text-uppercase fw-bold mb-4">
+           Extra links
+          </h6>
+          <p  class="pa">
+            <a href="" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>My Account</a>
+          </p>
+        
+          <p  class="pa">
+            <a href="" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>My Order</a>
+          </p>
+          
+          <p class="pa">
+            <a href="" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>My Wishlist</a>
+          </p>
+          
+          <p  class="pa">
+            <a href="" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>My Favorite</a>
+          </p>
+          
+          <p  class="pa">
+            <a href="" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-arrow-right" aria-hidden="true"></i>Terms Of Use</a>
+          </p>
+          
+          
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-light mt-5">
+          <!-- Links -->
+          <h6 class="footer  text-uppercase fw-bold mb-4">
+            Follow Us
+          </h6>
+          <p  class="pa">
+            <a href="" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-facebook" aria-hidden="true"></i>Facebook</a>
+          </p>
+          
+          <p  class="pa">
+            <a href="" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-twitter" aria-hidden="true"></i>Twitter</a>
+          </p>
+          
+          <p  class="pa">
+            <a href="" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-instagram" aria-hidden="true"></i>Instagram</a>
+          </p>
+          
+          <p  class="pa">
+            <a href="" class="text-reset"style="text-decoration:none;"><i class="foticon fa fa-pinterest" aria-hidden="true"></i>Pinterest</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-light mt-5">
+          <!-- Links -->
+          <h6 class="footer  text-uppercase fw-bold mb-4">
+            News Letter
+          </h6>
+         <p  class="par">Subcribe For Lattest Update</p>
+         
+         <input type="" value="" placeholder="enter your email" >
+           <br><br>
+         <button class="fotbutt">Submit</button>
+         <br><br>
+         <img src="image/payment.png" alt="" srcset="">
+
+          
+        </div>
+        
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  
+  <!-- Copyright -->
+</footer>
+
+
+
+<!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".Review-slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop:true,
+  grabCursor:true,
+  centeredSlides:true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    
+    },
+    768: {
+      slidesPerView: 2,
+     
+    },
+    991: {
+      slidesPerView: 3,
+     
+    },
+  },
+});
+</script>
+</body>
+</html>
